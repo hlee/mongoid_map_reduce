@@ -1,0 +1,15 @@
+= form_for @band do |f|
+  - if @band.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@band.errors.count, "error")} prohibited this band from being saved:"
+      ul
+        - @band.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :likes
+    = f.number_field :likes
+  .actions = f.submit 'Save'

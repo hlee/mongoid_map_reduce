@@ -1,0 +1,21 @@
+h1 Listing bands
+
+table
+  tr
+    th Name
+    th Likes
+    th
+    th
+    th
+
+  - @bands.each do |band|
+    tr
+      td = band.name
+      td = band.likes
+      td = link_to 'Show', band
+      td = link_to 'Edit', edit_band_path(band)
+      td = link_to 'Destroy', band, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Band', new_band_path

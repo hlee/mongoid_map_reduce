@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @band.name
+p
+  strong Likes:
+  = @band.likes
+
+= link_to 'Edit', edit_band_path(@band)
+'|
+= link_to 'Back', bands_path

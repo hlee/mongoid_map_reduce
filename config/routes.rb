@@ -1,4 +1,7 @@
 Rails3MongoidDevise::Application.routes.draw do
+  resources :bands
+
+
   authenticated :user do
     root :to => 'home#index'
   end
